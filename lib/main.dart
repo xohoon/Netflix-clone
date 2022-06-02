@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/screen/home.dart';
+import 'package:netflix/screen/screen_home.dart';
 import 'package:netflix/widget/bottom_bar.dart';
 
 void main() => runApp(MyApp());

@@ -1,10 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/widget/carousel_slider.dart';
+import '../model/model_movie.dart';
 
 class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
+  List<Movie> movies = [
+    Movie.fromMap(
+      {
+      'title': '라라랜드',
+      'keyword': '/사랑/로맨스',
+      'poster': 'lalaland.jpeg',
+      'like': false
+      }
+    ),
+    Movie.fromMap(
+      {
+      'title': '어바웃타임',
+      'keyword': '/사랑/로맨스/판타지',
+      'poster': 'abouttime.jpeg',
+      'like': false
+      }
+    ),
+    Movie.fromMap(
+      {
+      'title': '노트북',
+      'keyword': '/사랑/로맨스',
+      'poster': 'notebook.jpeg',
+      'like': false
+      }
+    ),
+    Movie.fromMap(
+      {
+      'title': '꽃다발같은 사랑을 했다',
+      'keyword': '/사랑/로맨스',
+      'poster': 'flower.jpeg',
+      'like': false
+      }
+    ),
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -12,7 +49,16 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return TopBar();
+    return ListView(
+      children: <Widget>[
+        Stack(
+          children: <Widget>[
+            CarouselImage(movies: movies),
+            TopBar(),
+          ],
+        )
+      ],
+    );
   }
 }
 
