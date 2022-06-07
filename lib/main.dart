@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
               Home(),
               Container(child: Text("SEARCH")),
               Container(child: Text("LIST")),
-              Container(child: Text("MORE")),
+              // MoreScreen(),
             ],
           ),
           bottomNavigationBar: Bottom(),
