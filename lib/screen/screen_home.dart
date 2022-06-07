@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/widget/box_slider.dart';
 import 'package:netflix/widget/carousel_slider.dart';
+import 'package:netflix/widget/circle_slider.dart';
 import '../model/model_movie.dart';
 
 class Home extends StatefulWidget {
@@ -56,7 +58,9 @@ class _HomeState extends State<Home> {
             CarouselImage(movies: movies),
             TopBar(),
           ],
-        )
+        ),
+        CircleSlider(movies: movies),
+        BoxSlider(movies: movies),
       ],
     );
   }
